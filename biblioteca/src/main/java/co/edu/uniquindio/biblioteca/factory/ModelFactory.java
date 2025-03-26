@@ -1,12 +1,12 @@
 package co.edu.uniquindio.biblioteca.factory;
 
 import co.edu.uniquindio.biblioteca.model.Biblioteca;
-import co.edu.uniquindio.biblioteca.model.Bibliotecario;
+//import co.edu.uniquindio.biblioteca.model.Bibliotecario;
 import co.edu.uniquindio.biblioteca.model.Libro;
-import co.edu.uniquindio.biblioteca.model.Revista;
-import co.edu.uniquindio.biblioteca.model.DVD;
-import co.edu.uniquindio.biblioteca.model.Miembro;
-import co.edu.uniquindio.biblioteca.model.Prestamo;
+//import co.edu.uniquindio.biblioteca.model.Revista;
+//import co.edu.uniquindio.biblioteca.model.DVD;
+//import co.edu.uniquindio.biblioteca.model.Usuario;
+//import co.edu.uniquindio.biblioteca.model.Prestamo;
 import co.edu.uniquindio.biblioteca.services.IModelFactoryServices;
 
 public class ModelFactory implements IModelFactoryServices {
@@ -34,14 +34,8 @@ public class ModelFactory implements IModelFactoryServices {
     //}
 
     @Override
-    public String buscarMiembroNombre(String nombre) {
-        return biblioteca.buscarMiembroNombre(nombre);
-    }
-
-    @Override
-    public String buscarPrestamo(Libro libro) {
-        return biblioteca.buscarPrestamo(libro);
+    public String buscarUsuarioNombre(String nombre) {
+        return biblioteca.buscarUsuarioNombre(nombre);
     }
     
-
 }

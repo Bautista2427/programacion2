@@ -4,16 +4,16 @@ import java.time.LocalDate;
 
 public class Prestamo {
     private Libro libro;
-    private Miembro miembro;
+    private Usuario Usuario;
     private LocalDate fechaPrestamo;
     private LocalDate fechaDevolucion;
     
     public Prestamo() {
     }
     
-    public Prestamo(Libro libro, Miembro miembro, LocalDate fechaPrestamo, LocalDate fechaDevolucion) {
+    public Prestamo(Libro libro, Usuario Usuario, LocalDate fechaPrestamo, LocalDate fechaDevolucion) {
         this.libro = libro;
-        this.miembro = miembro;
+        this.Usuario = Usuario;
         this.fechaPrestamo = fechaPrestamo;
         this.fechaDevolucion = fechaDevolucion;
         this.libro.prestar();
@@ -27,12 +27,12 @@ public class Prestamo {
         this.libro = libro;
     }
 
-    public Miembro getMiembro() {
-        return miembro;
+    public Usuario getUsuario() {
+        return Usuario;
     }
 
-    public void setMiembro(Miembro miembro) {
-        this.miembro = miembro;
+    public void setUsuario(Usuario Usuario) {
+        this.Usuario = Usuario;
     }
 
     public LocalDate getFechaPrestamo() {
@@ -57,7 +57,7 @@ public class Prestamo {
 
     @Override
     public String toString() {
-        return "Prestamo [libro=" + libro + ", miembro=" + miembro + 
+        return "Prestamo [libro=" + libro + ", Usuario=" + Usuario + 
                 ", fechaPrestamo=" + fechaPrestamo + 
                 ", fechaDevolucion=" + fechaDevolucion + 
                 "]";

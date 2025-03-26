@@ -6,7 +6,7 @@ import java.util.List;
 public class Biblioteca {
     private String nombre;
 
-    private List<Miembro> listaMiembros = new ArrayList<>();
+    private List<Usuario> listaUsuarios = new ArrayList<>();
     private List<Libro> listaLibros = new ArrayList<>();
     private List<Prestamo> listaPrestamos = new ArrayList<>();
     
@@ -26,12 +26,12 @@ public class Biblioteca {
         this.nombre = nombre;
     }
 
-    public List<Miembro> getListaMiembros() {
-        return listaMiembros;
+    public List<Usuario> getListaUsuarios() {
+        return listaUsuarios;
     }
 
-    public void setListaMiembros(List<Miembro> listaMiembros) {
-        this.listaMiembros = listaMiembros;
+    public void setListaUsuarios(List<Usuario> listaUsuarios) {
+        this.listaUsuarios = listaUsuarios;
     }
 
     public List<Libro> getListaLibros() {
@@ -50,22 +50,11 @@ public class Biblioteca {
         this.listaPrestamos = listaPrestamos;
     }
 
-    public String buscarPrestamo(Libro libro) {
+    public String buscarUsuarioNombre(String nombre) {
         String resultado = "";
-        for(Prestamo prestamo: getListaPrestamos()) {
-            if (prestamo.getLibro().equals(libro)) {
-                resultado = prestamo.toString();
-                break;
-            }
-        }
-        return resultado;
-    }
-
-    public String buscarMiembroNombre(String nombre) {
-        String resultado = "";
-        for (Miembro miembro: getListaMiembros()) {
-            if(miembro.getNombre().equalsIgnoreCase(nombre)) {
-                resultado = miembro.toString();
+        for (Usuario Usuario: getListaUsuarios()) {
+            if(Usuario.getNombre().equalsIgnoreCase(nombre)) {
+                resultado = Usuario.toString();
                 break;
             }
         }

@@ -1,33 +1,34 @@
 package co.edu.uniquindio.biblioteca;
 
 import co.edu.uniquindio.biblioteca.factory.ModelFactory;
+import co.edu.uniquindio.biblioteca.model.Usuario;
 import co.edu.uniquindio.biblioteca.util.Constantes;
 
 public class Main {
 
     public static void main(String[] args) {
         ModelFactory modelFactory = ModelFactory.getInstance();
-        buscarMiembroNombre(modelFactory);
-        buscarPrestamoLibro(modelFactory);
+        buscarUsuarioNombre(modelFactory);
+        //buscarPrestamoLibro(modelFactory);
+        crearUsuario(modelFactory);
 
     }
 
-    private static void buscarMiembroNombre(ModelFactory modelFactory) {
+    private static void crearUsuario(ModelFactory modelFactory) {
+        Usuario usuario = new Usuario(
+            "Pepito", 
+            "79520318"
+        );
+        modelFactory.crearUsuario(usuario);
+    }
+
+    private static void buscarUsuarioNombre(ModelFactory modelFactory) {
         String nombre = "Valentina";
-        String resultado = modelFactory.buscarMiembroNombre(nombre);
+        String resultado = modelFactory.buscarUsuarioNombre(nombre);
         validarResultado(
                 resultado, 
-                Constantes.MIEMBRO_EXISTENTE + resultado, 
-                Constantes.MIEMBRO_NO_EXISTE);
-    }
-
-    private static void buscarPrestamoLibro(ModelFactory modelFactory) {
-        String libro = "Si lo cress, Lo creas";
-        String resultado = modelFactory.buscarPrestamoLibro(libro);
-        validarResultado(
-                resultado, 
-                Constantes.LIBRO_NO_DISPONIBLE + resultado, 
-                Constantes.LIBRO_DISPONIBLE);
+                Constantes.Usuario_EXISTENTE + resultado, 
+                Constantes.Usuario_NO_EXISTE);
     }
 
     private static void validarResultado(String resultado, 

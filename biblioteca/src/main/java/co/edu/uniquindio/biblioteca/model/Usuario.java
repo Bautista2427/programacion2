@@ -3,18 +3,18 @@ package co.edu.uniquindio.biblioteca.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Miembro {
+public class Usuario {
     private String nombre;
-    private String idMiembro;
+    private String idUsuario;
 
     private List<Prestamo> listaPrestamos = new ArrayList<>();
 
-    public Miembro() {
+    public Usuario() {
     }
 
-    public Miembro(String nombre, String idMiembro, List<Prestamo> listaPrestamos) {
+    public Usuario(String nombre, String idUsuario, List<Prestamo> listaPrestamos) {
         this.nombre = nombre;
-        this.idMiembro = idMiembro;
+        this.idUsuario = idUsuario;
         this.listaPrestamos = listaPrestamos;
     }
 
@@ -26,12 +26,12 @@ public class Miembro {
         this.nombre = nombre;
     }
 
-    public String getIdMiembro() {
-        return idMiembro;
+    public String getIdUsuario() {
+        return idUsuario;
     }
 
-    public void setIdMiembro(String idMiembro) {
-        this.idMiembro = idMiembro;
+    public void setIdUsuario(String idUsuario) {
+        this.idUsuario = idUsuario;
     }
 
     public List<Prestamo> getListaPrestamos() {
@@ -46,15 +46,15 @@ public class Miembro {
         this.nombre = nuevoNombre;
     }
 
-    public void eliminarMiembro() {
-        System.out.println("Miembro eliminado");
+    public void eliminarUsuario() {
+        System.out.println("Usuario eliminado");
     }
     
     @Override
     public String toString() {
-        return "Miembro [" +
+        return "Usuario [" +
                 "nombre=" + nombre + '\'' +
-                ", idMiembro=" + idMiembro + '\'' +
+                ", idUsuario=" + idUsuario + '\'' +
                 ", listaPrestamos=" + listaPrestamos + '\'' +
                 "]";
     }

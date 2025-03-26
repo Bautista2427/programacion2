@@ -1,7 +1,8 @@
 package co.edu.uniquindio.biblioteca.services;
 
+import co.edu.uniquindio.biblioteca.model.Libro;
+
 public interface IModelFactoryServices {
 
-    String buscarMiembroNombre(String nombre);
-    String buscarPrestamoLibro(String libro);
+    String buscarUsuarioNombre(String nombre);
 }

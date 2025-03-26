@@ -14,7 +14,9 @@ public class Bibliotecario extends Empleado implements IGestionInventario{
     }
 
     @Override
-    public void gestionarItem() {
+    public void gestionarItem(Item item) {
         System.out.println("Gestionando ítem: " + item.getTitulo());
     }
+
+    
 }
